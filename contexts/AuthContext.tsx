@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [isAllowed, setIsAllowed] = useState<boolean>(false);
 
     const login = (email: string) => {
-        const isValidEmail = true || email.endsWith('@gmail.com');
+        const isValidEmail = email.endsWith('@gmail.com');
 
         if (isValidEmail) {
             setUser({ email, tasks: defaultTasks });
